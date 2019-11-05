@@ -1,4 +1,4 @@
-<?php
+?php
 // Gets a specific track and track meta data
 $fcbd = $api->getTrack('0D0gYmLWoVn9yuyZCOeGG8');
 $ds3 = $api->getTrack('3Yl7RLoezIr1bRHCRB1Qs5');
