@@ -1,4 +1,4 @@
-<?php 
+?php 
 require('vendor/autoload.php'); //loads api
 session_start();
 $spotifySession = new SpotifyWebAPI\Session( // creates a session with app credentials 
