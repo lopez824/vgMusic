@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>vgMusic</title>
+        <meta charset="utf-8"/> 
+        <meta name="description" content="A Video Game Music Suggestor" />
+        <link rel="stylesheet" type="text/css" href="vgm.css"/>
+        <link rel="icon" type="image/x-icon" href="favicon2.ico"/>
+    </head>
+
+    <body>
+        <h1>vgMusic</h1>
+        <h2>A Simple Music Suggestor</h2>
+        <!-- Possible Browser Player (Beta)
+        <script src="https://sdk.scdn.co/spotify-player.js"></script>
+        <script>
+            window.onSpotifyWebPlaybackSDKReady = () => {
+            const token = 'BQCaNKglYwEP0pOP22pJZaU53tS8_mtv13qEGz6FcSvxxXTSpJES2ynSbD7M0JYpraYUObbqKlEEo4rxBRMl8JEmegLtrBo43HDkijqEWUTgBcpDRA0kAWQpQ4KX7SYTzIWdDW_SusJVE_TVn1pKSrZmg1gLkxS5hjbyhPHE-xPxt8y_XTkmCQ';
+            const player = new Spotify.Player({
+                name: 'Web Playback SDK Quick Start Player',
+                getOAuthToken: cb => { cb(token); }
+            });
+
+            // Error handling
+            player.addListener('initialization_error', ({ message }) => { console.error(message); });
+            player.addListener('authentication_error', ({ message }) => { console.error(message); });
+            player.addListener('account_error', ({ message }) => { console.error(message); });
+            player.addListener('playback_error', ({ message }) => { console.error(message); });
+
+            // Playback status updates
+            player.addListener('player_state_changed', state => { console.log(state); });
+
+            // Ready
+            player.addListener('ready', ({ device_id }) => {
+                console.log('Ready with Device ID', device_id);
+            });
+
+            // Not Ready
+            player.addListener('not_ready', ({ device_id }) => {
+                console.log('Device ID has gone offline', device_id);
+            });
+
+            // Connect to the player!
+            player.connect();
+
+            const play = ({
+            spotify_uri,
+            playerInstance: {
+                _options: {
+                getOAuthToken,
+                id
+                }
+            }
+            }) => {
+            getOAuthToken(access_token => {
+                fetch(`https://api.spotify.com/v1/me/player/play?device_id=${id}`, {
+                method: 'PUT',
+                body: JSON.stringify({ uris: [spotify_uri] }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${access_token}`
+                },
+                });
+            });
+            };
+
+            play({
+            playerInstance: player,
+            spotify_uri: 'spotify:track:7xGfFoTpQ2E7fRF5lN10tr',
+            });
+            }; 
+        </script>
+        -->
+        <!--
+        <form action = "vgm_handler.php" method = "get">
+            <button name = "mood" type = "submit" id = "redButton" class="button" value = "red">
+                <span>Tense</span>
+            </button>
+            <button name = "mood" type = "submit" id = "greenButton" class="button" value = "green">
+                <span>Adventurous</span>
+            </button>
+            <button name = "mood" type = "submit" id = "blueButton" class="button" value = "blue">
+                <span>Calm</span>
+            </button>
+            <button name = "mood" type = "submit" id = "yellowButton" class="button" value = "yellow">
+                <span>Content</span>
+            </button>
+        </form>
+    -->
+        <p>List of Suggested Songs</p>
+        <div id = "songList">
+        <!-- Old Song List
+            <div>
+                <ul>
+                    <li><img src="playButton.png" alt="playButton"></li>
+                    <li><img src="playButton.png" alt="playButton"></li>
+                    <li><img src="playButton.png" alt="playButton"></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Happy Song 1</li>
+                    <li>Happy Song 2</li>
+                    <li>Happy Song 3</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href = "https://www.spotify.com/us/">visit</a></li>
+                    <li><a href = "https://www.spotify.com/us/">visit</a></li>
+                    <li><a href = "https://www.spotify.com/us/">visit</a></li>
+                </ul>
+            </div>
+        -->
+            <div>
+                <ul>
+                    <li>
+                         <iframe src="https://open.spotify.com/embed/track/7rtxlP1iijQrZeUASrioeg" width= "300" height= "80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </li>
+                </ul>
+            </div>
+        
+        </div>
+        <footer>
+            <address>
+                <p>Created by: Lionel Lopez</p>
+                <p>Email: <a href="mailto:lionellopez@u.boisestate.edu">
+                   lionellopez@u.boisestate.edu</a></p>
+            </address>
+        </footer>
+    </body>
+</html>
