@@ -1,4 +1,4 @@
-?php
+<?php
 class Dao {
   private $host = 'us-cdbr-iron-east-05.cleardb.net';
   private $dbname = 'heroku_20335a4afa944ee';
