@@ -1,7 +1,7 @@
 # vgMusic
 Web Development Project for Computer Science 401 at Boise State University.
 
-My website is quite simple. No login is required and it currently has the core functionality I wanted. 
+My website is quite simple. No login is required and it currently has the core functionality I wanted. Works best if you are logged into Spotify via the browser before visiting the site. Otherwise the song selections will only be 30 second previews. For some reason, Google chrome does not support full playback of songs. I have had consistent success with Mozilla Firefox.
 
 Link: https://vgmusic.herokuapp.com/
 
