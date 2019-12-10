@@ -1,22 +1,17 @@
 body {
     background-color:#F5F5F5;
     height: 100%;
-    
+    transition: background-color 1s;
 }
 
 footer {
     text-align: center;
-    margin-top: 10%;
 }
 
 h1 {
-    color: rgba(97, 13, 194, 0.5);
+    color: #0277bd;
     text-align: center;
-}
-
-h1:hover {
-    color: rgb(2, 119, 189);
-    transition: color .3s linear 0.25s;
+    transition: color 1s;
 }
 
 h2 {
@@ -27,7 +22,10 @@ h2 {
 
 p {
     text-align: center;
-    margin: 2px;
+}
+
+#funsies {
+    text-decoration: none;
 }
 
 form {
@@ -51,17 +49,9 @@ form {
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
-/*
-.button span {
-    opacity: 0;
-}*/
 
 #redButton {
     background-color: rgb(197, 45, 45);
-}
-
-#greenButton {
-    background-color: #4CAF50;
 }
 
 #blueButton {
@@ -72,27 +62,14 @@ form {
     background-color: rgb(223, 223, 91);
 }
 #redButton:hover {background-color: #9e3232}
-#greenButton:hover {background-color: #3e8e41}
 #blueButton:hover {background-color: #3257a5}
 #yellowButton:hover {background-color: #b9b138}
-
-/*
-.button span:hover {
-    opacity: 1;
-    transition: 0.5s;
-}*/
 
 #redButton:active {
     background-color: #9e3232;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
-
-#greenButton:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
 
 #blueButton:active {
     background-color: #3257a5;
@@ -106,18 +83,25 @@ form {
     transform: translateY(4px);
   }
 
+.hidden {
+    opacity: 0;
+}
+.fadein {
+    transition: opacity 1s;
+}
+
 #songList {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 45%;
+    width: 75%;
     margin: auto;
-    border: 2px solid rgba(97, 13, 194, 0.5);
-    border-radius: 5px;
 }
 
-#songList ul {
+li {
     list-style-type: none;
-    margin: 10px;
+    display: inline-block;
+    margin: 5px;
     padding: 0;
 }
+

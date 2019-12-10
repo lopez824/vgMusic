@@ -17,7 +17,7 @@ class Dao {
   public function getSongs($mood) {
     $conn = $this->getConnection();
     try {
-      return $conn->query("select id from song_list where color = '$mood'", PDO::FETCH_ASSOC);
+      return $conn->query("select id from song_list where color = '$mood' order by name", PDO::FETCH_ASSOC);
     } catch(Exception $e) {
       echo print_r($e,1);
       exit;
@@ -33,6 +33,29 @@ class Dao {
     $q->bindParam(":album",$album);
     $q->bindParam(":color",$color);
     $q->execute();
+  }
+
+  public function insertUser($name, $password) {
+    $conn = $this->getConnection();
+    $saveUser = "insert into users (name, password) values (:name, :password)";
+    $q = $conn->prepare($saveUser);
+    $q->bindParam(":name",$name);
+    $q->bindParam(":password",$password);
+    $q->execute();
+  }
+
+  public function getUser($name, $password) {
+    $conn = $this->getConnection();
+    $userData = $conn->query("select * from users where name = '$name' and password = '$password'",PDO::FETCH_ASSOC);
+    return $userData;
+  }
+
+  public function addScore($score) {
+    $conn = $this->getConnection();
+  }
+
+  public function getScore() {
+    $conn = $this->getConnection();
   }
 } ?>
 

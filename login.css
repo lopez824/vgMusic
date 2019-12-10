@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+    margin: auto;
+}
+form {
+    text-align: center;
+}
+input {
+    display: block;
+    margin: 5px auto;
+}
