@@ -1,5 +1,6 @@
 <?php 
 require('vendor/autoload.php'); //loads api
+header('Access-Control-Allow-Origin: *');
 session_start();
 $spotifySession = new SpotifyWebAPI\Session( // creates a session with app credentials 
     '98b88799d05c4a168ab881885bf1c5d9',
