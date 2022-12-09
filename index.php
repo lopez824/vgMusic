@@ -62,8 +62,8 @@ $api->setAccessToken($accessToken); // sets valid token that allows requests to 
         <footer>
             <address>
                 <p>Created by: <a id = "funsies" href="https://vgmusic.herokuapp.com/login/login.php">Lionel Lopez</a></p>
-                <p>Email: <a href="mailto:lionellopez@u.boisestate.edu">
-                   lionellopez@u.boisestate.edu</a></p>
+                <p>Email: <a href="mailto:lionelslopez14@gmail.com">
+                   lionelslopez14@gmail.com</a></p>
             </address>
         </footer>
     </body>
